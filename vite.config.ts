@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/memematch/',
   build: {
     rollupOptions: {
-      external: ['/memematch/demo.mp4']
+      external: ['/demo.mp4']
     }
   }
 })
