@@ -27,8 +27,9 @@ jobs:
       - name: Ensure video file is in dist
         run: |
           echo "=== Ensuring demo.mp4 is in dist ==="
-          if [ -f "public/demo.mp4" ]; then
-            cp public/demo.mp4 dist/demo.mp4
+          if [ -f "./public/demo.mp4" ]; then
+            mkdir ./dist
+            cp ./public/demo.mp4 ./dist/demo.mp4
             echo "Copied demo.mp4 to dist"
           else
             echo "Warning: demo.mp4 not found in public directory"
