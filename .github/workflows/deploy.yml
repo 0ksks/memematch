@@ -14,8 +14,24 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
+      - name: Debug - Check directory structure
+        run: |
+          echo "=== Current directory ==="
+          pwd
+          echo "=== List all files ==="
+          ls -la
+          echo "=== Check public directory ==="
+          ls -lh public/ || echo "No public directory"
+          echo "=== Check if demo.mp4 exists ==="
+          find . -name "demo.mp4" -type f
       - name: Build
         run: npm run build
+      - name: Debug - Check dist directory
+        run: |
+          echo "=== Check dist directory ==="
+          ls -lh dist/ || echo "No dist directory"
+          echo "=== Check if demo.mp4 in dist ==="
+          find dist -name "demo.mp4" -type f || echo "demo.mp4 not found in dist"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
