@@ -1,0 +1,17 @@
+{
+  "name": "memematch-slides",
+  "version": "1.0.0",
+  "description": "MemeMatch Project Presentation",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.40.0"
+  }
+}

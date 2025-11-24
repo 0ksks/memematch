@@ -1,0 +1,105 @@
+/* Custom styles for MemeMatch slides */
+
+/* Ensure code blocks fit */
+pre {
+  font-size: 0.85em !important;
+  line-height: 1.4 !important;
+}
+
+/* Better spacing for formulas */
+.katex-display {
+  margin: 0.5em 0 !important;
+}
+
+/* Compact lists */
+ul,
+ol {
+  margin: 0.5em 0 !important;
+}
+
+li {
+  margin: 0.3em 0 !important;
+}
+
+/* Better table spacing */
+table {
+  font-size: 0.9em !important;
+}
+
+th,
+td {
+  padding: 0.4em 0.8em !important;
+}
+
+/* Compact headings */
+h1 {
+  margin-bottom: 0.5em !important;
+}
+
+h2 {
+  margin: 0.5em 0 !important;
+  font-size: 1.5em !important;
+}
+
+h3 {
+  margin: 0.4em 0 !important;
+  font-size: 1.2em !important;
+}
+
+/* Better grid spacing */
+.grid {
+  gap: 1rem !important;
+}
+
+/* Ensure content fits in two-cols layout */
+.slidev-layout.two-cols {
+  gap: 2rem;
+}
+
+.slidev-layout.two-cols>div {
+  padding: 0 1rem;
+}
+
+/* Compact v-clicks */
+.slidev-vclick-target {
+  margin: 0.3em 0;
+}
+
+/* Better code highlighting */
+.shiki {
+  font-size: 0.85em !important;
+  padding: 0.5em !important;
+}
+
+/* Ensure formulas are readable but compact */
+.katex {
+  font-size: 1em !important;
+}
+
+/* Center layout adjustments */
+.slidev-layout.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure Mermaid diagrams in center layout are visible and large */
+.slidev-layout.center .mermaid {
+  max-width: 95%;
+  max-height: 85vh;
+}
+
+/* Make sequence diagrams more readable */
+.mermaid .actor {
+  font-size: 16px !important;
+}
+
+.mermaid .messageText {
+  font-size: 14px !important;
+}
+
+/* Make state diagrams more readable */
+.mermaid .state-title {
+  font-size: 16px !important;
+}
