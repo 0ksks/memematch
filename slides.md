@@ -75,7 +75,7 @@ transition: slide-up
 
 <v-click>
 <div style="display: flex; justify-content: center;">
-<video controls width="80%" src="demo.mp4">
+<video controls width="80%" src="/demo.mp4">
   Your browser does not support the video tag.
 </video>
 </div>

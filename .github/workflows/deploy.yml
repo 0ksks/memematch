@@ -24,24 +24,14 @@ jobs:
           ls -lh public/ || echo "No public directory"
           echo "=== Check if demo.mp4 exists ==="
           find . -name "demo.mp4" -type f
-      - name: Ensure video file is in dist
-        run: |
-          echo "=== Ensuring demo.mp4 is in dist ==="
-          if [ -f "./public/demo.mp4" ]; then
-            mkdir ./dist
-            cp ./public/demo.mp4 ./dist/demo.mp4
-            echo "Copied demo.mp4 to dist"
-          else
-            echo "Warning: demo.mp4 not found in public directory"
-          fi
+      - name: Build
+        run: npm run build
       - name: Debug - Check dist directory
         run: |
           echo "=== Check dist directory ==="
           ls -lh dist/ || echo "No dist directory"
           echo "=== Check if demo.mp4 in dist ==="
           find dist -name "demo.mp4" -type f || echo "demo.mp4 not found in dist"
-      - name: Build
-        run: npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
