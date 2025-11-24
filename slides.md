@@ -75,8 +75,8 @@ transition: slide-up
 
 <v-click>
 <div style="display: flex; justify-content: center;">
-<video controls width="80%">
-  <source src="demo.mp4" type="video/mp4">
+<video controls width="80%" src="/memematch/demo.mp4">
+  Your browser does not support the video tag.
 </video>
 </div>
 </v-click>
