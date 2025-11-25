@@ -37,18 +37,11 @@ layout: default
 
 # What is MemeMatch?
 
-<v-clicks>
-
 - 🧠 **Intelligent Emotion Recognition** - Powered by LLaMA 3.3 70B
 - 🔍 **Multimodal Retrieval** - Combining CLIP image encoding and M3E text encoding
 - 🎨 **Creative Generation** - Auto-generates personalized memes when needed
 - 💬 **Conversational Interface** - Real-time streaming responses
 - 🎯 **Top-N Recommendations** - Multiple candidates for better choices
-
-</v-clicks>
-
-
-<v-click>
 
 <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 py-[0.1rem] px-[2rem] rounded-lg border border-blue-500/30 ">
 
@@ -61,12 +54,11 @@ Users want to express emotions with memes but:
 
 </div>
 
-</v-click>
 
 <!--
-We've all faced this: you want to share a meme that captures exactly how you're feeling, but you can't find the right one. [click]
-MemeMatch solves this by understanding your emotions and [click]
-either finding the perfect match from our collection [click]
+We've all faced this: you want to share a meme that captures exactly how you're feeling, but you can't find the right one. 
+MemeMatch solves this by understanding your emotions and 
+either finding the perfect match from our collection
 or generating a new one on the spot.
 -->
 
