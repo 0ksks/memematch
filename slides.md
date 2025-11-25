@@ -64,9 +64,9 @@ Users want to express emotions with memes but:
 </v-click>
 
 <!--
-We've all faced this: you want to share a meme that captures exactly how you're feeling, but you can't find the right one. <click>
-MemeMatch solves this by understanding your emotions and <click>
-either finding the perfect match from our collection <click>
+We've all faced this: you want to share a meme that captures exactly how you're feeling, but you can't find the right one. [click]
+MemeMatch solves this by understanding your emotions and [click]
+either finding the perfect match from our collection [click]
 or generating a new one on the spot.
 -->
 
@@ -85,7 +85,7 @@ transition: slide-up
 </v-click>
 
 <!--
-Let me show you how this works in practice. <click>
+Let me show you how this works in practice. [click]
 Watch how users simply describe their feelings, and the system responds with perfectly matched memes while showing its reasoning process in real-time.
 -->
 
@@ -120,7 +120,7 @@ graph TB
 </v-click>
 
 <!--
-Behind that smooth experience is a three-layer architecture: <click>
+Behind that smooth experience is a three-layer architecture: [click]
 Vue 3 handles the interface, FastAPI manages requests, and the intelligence layer - powered by LLaMA 3.3, CLIP, and M3E - does the actual understanding, searching, and creating.
 -->
 
@@ -167,7 +167,7 @@ sequenceDiagram
 </v-click>
 
 <!--
-Here's how these components work together: <click>
+Here's how these components work together: [click]
 the agent extracts emotion keywords, searches our database, and makes a smart decision - if the match quality is high enough, it returns those results; otherwise, it automatically generates a new meme.
 -->
 
@@ -260,13 +260,13 @@ $$
 </v-click>
 
 <!--
-The search component <click>
-uses two encoders - <click>
-M3E for Chinese text and <click>
-CLIP for images. The interesting part is how we combine them: <click>
-instead of simple averaging, we use Reciprocal Rank Fusion, <click>
-which considers rank positions and <click>
-handles the different score scales much better. <click>
+The search component [click]
+uses two encoders - [click]
+M3E for Chinese text and [click]
+CLIP for images. The interesting part is how we combine them: [click]
+instead of simple averaging, we use Reciprocal Rank Fusion, [click]
+which considers rank positions and [click]
+handles the different score scales much better. [click]
 This gives us sub-second search across nearly 5,000 memes.
 -->
 
@@ -352,10 +352,10 @@ where $s$ is similarity score
 </div>
 
 <!--
-While the search engine finds memes, the agent orchestrates everything intelligently. <click>
-It uses low temperature for stable emotion extraction <click>
-but high temperature for creative text generation. <click>
-Through function calling, it coordinates search and generation, <click>
+While the search engine finds memes, the agent orchestrates everything intelligently. [click]
+It uses low temperature for stable emotion extraction [click]
+but high temperature for creative text generation. [click]
+Through function calling, it coordinates search and generation, [click]
 automatically switching between them based on match quality.
 -->
 
@@ -426,9 +426,9 @@ pie title Meme Distribution
 </div>
 
 <!--
-So how well does this system perform? <click>
-The entire process takes just 1 to 2 seconds end-to-end, <click>
-and our Top-2 accuracy reaches 85% - <click>
+So how well does this system perform? [click]
+The entire process takes just 1 to 2 seconds end-to-end, [click]
+and our Top-2 accuracy reaches 85% - [click]
 meaning users find a suitable meme within the first two recommendations most of the time.
 -->
 
@@ -502,9 +502,9 @@ transition: slide-up
 </div>
 
 <!--
-Achieving these results required careful technology choices. <click>
-We built the backend with Python and FastAPI, using LLaMA 3.3 through SambaNova's free API. <click>
-The frontend uses Vue 3 with Server-Sent Events for that real-time streaming experience. <click>
+Achieving these results required careful technology choices. [click]
+We built the backend with Python and FastAPI, using LLaMA 3.3 through SambaNova's free API. [click]
+The frontend uses Vue 3 with Server-Sent Events for that real-time streaming experience. [click]
 The entire stack is optimized for speed, accuracy, and cost-effectiveness.
 -->
 
@@ -556,9 +556,9 @@ $$
 </v-click>
 
 <!--
-Beyond just assembling good technologies, we introduced three key innovations. <click>
-First, our query fusion strategy preserves semantic richness by intelligently combining user queries with extracted keywords. <click>
-Second, streaming responses let users see the AI's thinking process unfold in real-time. <click>
+Beyond just assembling good technologies, we introduced three key innovations. [click]
+First, our query fusion strategy preserves semantic richness by intelligently combining user queries with extracted keywords. [click]
+Second, streaming responses let users see the AI's thinking process unfold in real-time. [click]
 And third, our three-tier fallback ensures users always get a meaningful result.
 -->
 
@@ -623,9 +623,9 @@ transition: slide-up
 
 
 <!--
-Looking ahead, we're planning to expand in three phases: <click>
-starting with more templates and user uploads, <click>
-then adding image search and personalization, <click>
+Looking ahead, we're planning to expand in three phases: [click]
+starting with more templates and user uploads, [click]
+then adding image search and personalization, [click]
 and eventually integrating Stable Diffusion for truly AI-generated memes and expanding to multiple languages.
 -->
 
@@ -706,11 +706,11 @@ transition: fade
 </div>
 
 <!--
-To summarize, we've built a system that's both technically sophisticated and genuinely useful - <click>
-achieving 85% accuracy with sub-2-second responses <click>
-while successfully implementing advanced <click><click>
-LLM agents, <click>
-multimodal retrieval, <click>
+To summarize, we've built a system that's both technically sophisticated and genuinely useful - [click]
+achieving 85% accuracy with sub-2-second responses [click]
+while successfully implementing advanced [click][click]
+LLM agents, [click]
+multimodal retrieval, [click]
 and robust system design. Most importantly, it makes expressing emotions through memes faster and more fun.
 -->
 
