@@ -27,7 +27,7 @@ base: /memematch/
 </div>
 
 <!--
-Welcome! Today I'll present MemeMatch - an AI system that helps people find and create perfect memes to express their emotions.
+Welcome! Today I'm presenting MemeMatch - a system that helps people find the perfect meme to express their emotions.
 -->
 
 ---
@@ -64,7 +64,7 @@ Users want to express emotions with memes but:
 </v-click>
 
 <!--
-MemeMatch solves a common problem: finding the right meme to express your feelings. It combines emotion recognition, multimodal search, and creative generation to bridge this gap.
+We've all faced this: you want to share a meme that captures exactly how you're feeling, but you can't find the right one. MemeMatch solves this by understanding your emotions and either finding the perfect match from our collection or generating a new one on the spot.
 -->
 
 ---
@@ -82,7 +82,7 @@ transition: slide-up
 </v-click>
 
 <!--
-Let's see it in action. Users describe emotions in natural language, and the system responds with matched memes in real-time, streaming the AI's reasoning process.
+Let me show you how this works in practice. Watch how users simply describe their feelings, and the system responds with perfectly matched memes while showing its reasoning process in real-time.
 -->
 
 ---
@@ -116,7 +116,7 @@ graph TB
 </v-click>
 
 <!--
-The architecture has three layers: Vue 3 frontend for interaction, FastAPI for requests, and an intelligence layer with LLaMA 3.3 for emotion understanding, CLIP+M3E for search, and a generator for creating new memes.
+Behind that smooth experience is a three-layer architecture: Vue 3 handles the interface, FastAPI manages requests, and the intelligence layer - powered by LLaMA 3.3, CLIP, and M3E - does the actual understanding, searching, and creating.
 -->
 
 ---
@@ -162,7 +162,7 @@ sequenceDiagram
 </v-click>
 
 <!--
-The workflow: extract emotion keywords, search the database. If similarity score is above 0.8, return results. Otherwise, generate a new meme automatically.
+Here's how these components work together: the agent extracts emotion keywords, searches our database, and makes a smart decision - if the match quality is high enough, it returns those results; otherwise, it automatically generates a new meme.
 -->
 
 ---
@@ -254,7 +254,7 @@ $$
 </v-click>
 
 <!--
-The retrieval uses M3E for text and CLIP for images. We combine them with Reciprocal Rank Fusion, which considers rank positions and handles multimodal data better than averaging. Search completes in 0.1-0.3 seconds across 4,648 memes.
+The search component uses two encoders - M3E for Chinese text and CLIP for images. The interesting part is how we combine them: instead of simple averaging, we use Reciprocal Rank Fusion, which considers rank positions and handles the different score scales much better. This gives us sub-second search across nearly 5,000 memes.
 -->
 
 ---
@@ -339,7 +339,7 @@ where $s$ is similarity score
 </div>
 
 <!--
-The agent uses temperature 0.1 for stable emotion extraction and 0.8 for creative generation. It leverages function calling and automatically switches between search and generation based on the 0.8 threshold.
+While the search engine finds memes, the agent orchestrates everything intelligently. It uses low temperature for stable emotion extraction but high temperature for creative text generation. Through function calling, it coordinates search and generation, automatically switching between them based on match quality.
 -->
 
 ---
@@ -409,7 +409,7 @@ pie title Meme Distribution
 </div>
 
 <!--
-End-to-end response time is 1-2 seconds. Top-2 accuracy reaches 85%, meaning users find suitable memes within the first two recommendations most of the time, across 4,648 memes in 20 emotion categories.
+So how well does this system perform? The entire process takes just 1 to 2 seconds end-to-end, and our Top-2 accuracy reaches 85% - meaning users find a suitable meme within the first two recommendations most of the time.
 -->
 
 ---
@@ -482,7 +482,7 @@ transition: slide-up
 </div>
 
 <!--
-Built with Python, FastAPI, and LLaMA 3.3 via free SambaNova Cloud. Vue 3 frontend with Server-Sent Events for real-time streaming. The result: fast, accurate, and cost-effective.
+Achieving these results required careful technology choices. We built the backend with Python and FastAPI, using LLaMA 3.3 through SambaNova's free API. The frontend uses Vue 3 with Server-Sent Events for that real-time streaming experience. The entire stack is optimized for speed, accuracy, and cost-effectiveness.
 -->
 
 ---
@@ -533,7 +533,7 @@ $$
 </v-click>
 
 <!--
-Three key innovations: query fusion to preserve semantic richness, streaming responses for real-time AI reasoning visibility, and a robust three-tier fallback mechanism ensuring users always get results.
+Beyond just assembling good technologies, we introduced three key innovations. First, our query fusion strategy preserves semantic richness by intelligently combining user queries with extracted keywords. Second, streaming responses let users see the AI's thinking process unfold in real-time. And third, our three-tier fallback ensures users always get a meaningful result.
 -->
 
 ---
@@ -597,7 +597,7 @@ transition: slide-up
 
 
 <!--
-Future plans: short-term adds more templates and user uploads; mid-term brings image search and personalization; long-term includes Stable Diffusion generation, multi-language support, and B2B API.
+Looking ahead, we're planning to expand in three phases: starting with more templates and user uploads, then adding image search and personalization, and eventually integrating Stable Diffusion for truly AI-generated memes and expanding to multiple languages.
 -->
 
 ---
@@ -677,7 +677,7 @@ transition: fade
 </div>
 
 <!--
-We've achieved 85% Top-2 accuracy with 1-2 second responses across 4,648 memes. The system successfully implements LLM agents with function calling, multimodal retrieval with RRF, and robust microservice architecture - creating something both technically impressive and genuinely useful.
+To summarize, we've built a system that's both technically sophisticated and genuinely useful - achieving 85% accuracy with sub-2-second responses while successfully implementing advanced LLM agents, multimodal retrieval, and robust system design. Most importantly, it makes expressing emotions through memes faster and more fun.
 -->
 
 ---
@@ -698,5 +698,5 @@ class: text-center
 </div>
 
 <!--
-Thank you! I'm happy to answer any questions about the technical implementation or design decisions.
+Thank you! I'm happy to answer any questions about MemeMatch.
 -->
