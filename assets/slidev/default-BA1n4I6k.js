@@ -1,1 +1,0 @@
-import{f as o,o as t,j as s}from"../modules/vue-LyFmJoOC.js";import{b as r}from"../index-CAc6rSYP.js";const a={},c={class:"slidev-layout default"};function n(e,l){return t(),o("div",c,[s(e.$slots,"default")])}const _=r(a,[["render",n],["__file","/home/runner/work/memematch/memematch/node_modules/@slidev/client/layouts/default.vue"]]);export{_ as I};
